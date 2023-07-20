@@ -19,13 +19,11 @@ def api():
         n = int(n)
         if n <= 0:
             # nが0以下の数
-            return jsonify(
-            {
+            return jsonify({
                 "status" : 400,
                 "message" : "Bad request.",
                 "error-message" : "n must be a natural number. Not a negative number."
-            }
-            ),400
+            }),400
     except:
         # nが整数でない
         return jsonify({

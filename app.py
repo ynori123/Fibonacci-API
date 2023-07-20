@@ -17,8 +17,8 @@ def api():
                 "error-message" : "n not found.Please enter n."
             }),400 
         n = int(n)
-        if n < 0:
-            # nが負の数
+        if n <= 0:
+            # nが0以下の数
             return jsonify(
             {
                 "status" : 400,

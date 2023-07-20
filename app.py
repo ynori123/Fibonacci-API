@@ -14,7 +14,8 @@ def api():
              return jsonify(
             {
                 "status" : 400,
-                "message" : "Bad request."
+                "message" : "Bad request.",
+                "error-message" : "n not found.Please enter n."
             }
         )   
         n = int(n)
@@ -23,7 +24,8 @@ def api():
             return jsonify(
             {
                 "status" : 400,
-                "message" : "Bad request."
+                "message" : "Bad request.",
+                "error-message" : "n must be natural number. Not a negative number."
             }
         )
     except:
@@ -31,7 +33,8 @@ def api():
         return jsonify(
             {
                 "status" : 400,
-                "message" : "Bad request."
+                "message" : "Bad request.",
+                "error-message" : "n must be natural number."
             }
         )
     

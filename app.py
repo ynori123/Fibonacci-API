@@ -16,7 +16,7 @@ def api():
                 "status" : 400,
                 "message" : "Bad request.",
                 "error-message" : "n not found.Please enter n."
-            }
+            },400
         )   
         n = int(n)
         if n <= 0:
@@ -26,7 +26,7 @@ def api():
                 "status" : 400,
                 "message" : "Bad request.",
                 "error-message" : "n must be natural number. Not a negative number."
-            }
+            },400
         )
     except:
         # nが整数でない
@@ -35,13 +35,13 @@ def api():
                 "status" : 400,
                 "message" : "Bad request.",
                 "error-message" : "n must be natural number."
-            }
+            },400
         )
     
     return jsonify(
         {
             "result" : fibonacci(n=n)
-        }
+        },200
     )
     
 # フィボナッチ関数

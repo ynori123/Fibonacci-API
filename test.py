@@ -20,5 +20,9 @@ class Test(unittest.TestCase):
     def test_large_fib(self):
         result = fibonacci(100)
         self.assertEqual(result, 354224848179261915075)
+    def test_largelarge_fib(self):
+        result = fibonacci(200)
+        self.assertEqual(result, 280571172992510140037611932413038677189525)
+    
 if __name__=='__main__':
     unittest.main()

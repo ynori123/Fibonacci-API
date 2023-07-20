@@ -1,8 +1,9 @@
 # n番目のフィボナッチ数を返すREST API
 
 ## 使用技術
-フレームワーク：Flask(Python)
+フレームワーク：Flask(Python)   
 サーバ：render.com
+※ 無料プランを使用しており、時間が開くと起動に時間がかかるため、テストする際最初のレスポンスが遅くなります。
 
 ## 仕様
 `https://fibonacci-api-hsbz.onrender.com/fib?n=5`のようにアクセスすると、5番目のフィボナッチ数を返す。

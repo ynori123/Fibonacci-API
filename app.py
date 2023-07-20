@@ -11,38 +11,32 @@ def api():
         n = req.get("n")
         if n is None:
              # リクエストパラメータが存在しない
-             return jsonify(
-            {
+             return jsonify({
                 "status" : 400,
                 "message" : "Bad request.",
                 "error-message" : "n not found.Please enter n."
-            },400
-        )   
+            }),400 
         n = int(n)
-        if n <= 0:
-            # nが0以下
+        if n < 0:
+            # nが負の数
             return jsonify(
             {
                 "status" : 400,
                 "message" : "Bad request.",
-                "error-message" : "n must be natural number. Not a negative number."
-            },400
-        )
+                "error-message" : "n must be a natural number. Not a negative number."
+            }
+            ),400
     except:
         # nが整数でない
-        return jsonify(
-            {
+        return jsonify({
                 "status" : 400,
                 "message" : "Bad request.",
                 "error-message" : "n must be natural number."
-            },400
-        )
+            }),400
     
-    return jsonify(
-        {
+    return jsonify({
             "result" : fibonacci(n=n)
-        },200
-    )
+        }),200
     
 # フィボナッチ関数
 def fibonacci(n :int) ->int:
